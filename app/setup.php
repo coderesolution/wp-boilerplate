@@ -49,6 +49,53 @@ add_filter('admin_head', function () {
 });
 
 /**
+ * Enqueue styles for the admin area.
+ * Excludes block editor and login page.
+ *
+ * @return void
+ */
+add_action('admin_enqueue_scripts', function () {
+    // Skip if in block editor
+    if (get_current_screen()?->is_block_editor()) {
+        return;
+    }
+
+    // Skip if on login page
+    if (in_array($GLOBALS['pagenow'], ['wp-login.php', 'wp-register.php'], true)) {
+        return;
+    }
+
+    $style = Vite::asset('resources/css/admin.css');
+
+    if ($style) {
+        wp_enqueue_style(
+            'sage/admin',
+            $style,
+            [],
+            null
+        );
+    }
+});
+
+/**
+ * Enqueue styles for the login page.
+ *
+ * @return void
+ */
+add_action('login_enqueue_scripts', function () {
+    $style = Vite::asset('resources/css/login.css');
+
+    if ($style) {
+        wp_enqueue_style(
+            'sage/login',
+            $style,
+            [],
+            null
+        );
+    }
+});
+
+/**
  * Use the generated theme.json file.
  *
  * @return string

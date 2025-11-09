@@ -2,3 +2,53 @@
 
 /* Auto-import all block styles for editor preview and HMR */
 @import './blocks.css';
+
+/* Page title */
+.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper {
+  --width: var(--container-max-width-1);
+  align-items: stretch;
+  background: var(--page-title-preview-background-color, transparent);
+  border-bottom: 1px solid rgba(var(--rgb--1), 0.1);
+  box-sizing: border-box;
+  column-gap: 10px;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  justify-content: flex-start;
+  margin-block: 0 !important;
+  margin-inline: auto;
+  padding-block: 30px;
+  padding-inline: var(--container-padding-sm, 4.5vw);
+  text-align: left;
+  width: 100%;
+
+  @media (min-width: 1021px) {
+    padding-inline: var(--container-padding-lg, 40px) !important;
+  }
+
+  h1.wp-block-post-title {
+    background: rgb(243, 243, 243);
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #000;
+    display: block;
+    font-size: responsive 20px 36px;
+    font-weight: 500;
+    line-height: 1em;
+    margin: 0 !important;
+    max-width: 100%;
+    padding: 0.35em;
+    width: fit-content;
+
+    &::before {
+      content: 'Page Title:';
+      color: inherit;
+      flex: 0 0 auto;
+      font-size: inherit;
+      line-height: inherit;
+      margin-inline-end: 0.3em;
+      opacity: 0.5;
+      width: fit-content;
+    }
+  }
+}

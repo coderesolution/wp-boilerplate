@@ -20,6 +20,8 @@ export default defineConfig(({ command, mode }) => {
           'resources/js/app.js',
           'resources/css/editor.css',
           'resources/js/editor.js',
+          'resources/css/admin.css',
+          'resources/css/login.css',
         ],
         refresh: true,
       }),
