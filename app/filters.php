@@ -19,6 +19,17 @@ if (file_exists(__DIR__ . '/../vendor/roots/allow-svg/allow-svg.php')) {
 }
 
 /**
+ * Adjust speculative loading (prefetching/prerendering) for internal links.
+ * May cause conflicts with View Transitions API.
+ */
+add_filter('wp_speculation_rules_configuration', function () {
+    return [
+        'mode' => 'auto',
+        'eagerness' => 'moderate',
+    ];
+});
+
+/**
  * Add "… Continued" to the excerpt.
  *
  * @return string
