@@ -1,6 +1,15 @@
+# Dependencies
 /node_modules
 /vendor
+npm-debug.log
+
+# Environment variables
+.env
+
+# Build files
 /public/*
 !/public/.gitkeep
-.env
-npm-debug.log
+
+# Apple OSX
+.DS_Store
+._.DS_Store

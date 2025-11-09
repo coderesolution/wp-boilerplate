@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
@@ -15,9 +17,7 @@ class App extends Composer
         '*',
     ];
 
-    /**
-     * Retrieve the site name.
-     */
+    /** Retrieve the site name. */
     public function siteName(): string
     {
         return get_bloginfo('name', 'display');

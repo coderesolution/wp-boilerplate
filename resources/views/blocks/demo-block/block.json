@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "sage/demo-block",
+  "title": "Demo Block",
+  "description": "A demo ACF block to test auto-import functionality.",
+  "category": "text",
+  "icon": "admin-generic",
+  "keywords": ["demo", "example", "sage", "acf"],
+  "textdomain": "sage",
+  "acf": {
+    "blockVersion": 3,
+    "renderTemplate": "demo-block.php",
+    "hideFieldsInSidebar": true,
+    "mode": "preview"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "color": {
+      "text": false,
+      "background": true
+    },
+    "html": false,
+    "spacing": {
+      "margin": ["top", "bottom"],
+      "padding": ["top", "bottom"]
+    }
+  }
+}

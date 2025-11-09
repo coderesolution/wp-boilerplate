@@ -1,0 +1,70 @@
+/**
+ * Header Block Styles
+ * Global block - loaded on all pages
+ */
+
+.c-header-block {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 0;
+}
+
+.c-header-block[data-cid] {
+  .header-block_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .header-block_logo {
+    font-size: responsive 20px 28px;
+    font-weight: 700;
+    color: #1f2937;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .header-block_nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .header-block_link {
+    font-size: responsive 14px 16px;
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #1f2937;
+      }
+    }
+  }
+
+  .header-block_cta {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: responsive 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #2563eb;
+      }
+    }
+  }
+}

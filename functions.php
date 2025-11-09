@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Roots\Acorn\Application;
 
 /*
@@ -13,7 +15,7 @@ use Roots\Acorn\Application;
 |
 */
 
-if (! file_exists($composer = __DIR__.'/vendor/autoload.php')) {
+if ( ! file_exists($composer = __DIR__.'/vendor/autoload.php')) {
     wp_die(__('Error locating autoloader. Please run <code>composer install</code>.', 'sage'));
 }
 
@@ -49,9 +51,9 @@ Application::configure()
 |
 */
 
-collect(['setup', 'filters'])
+collect(['setup', 'filters', 'acf', 'blocks', 'block-assets', 'helpers'])
     ->each(function ($file) {
-        if (! locate_template($file = "app/{$file}.php", true, true)) {
+        if ( ! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
                 /* translators: %s is replaced with the relative file path */
                 sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file)

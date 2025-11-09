@@ -1,0 +1,45 @@
+.c-demo-block {
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+
+  .demo-block_inner {
+    background-image: url('../../images/test.svg');
+    background-size: 100px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    max-width: 100%;
+  }
+
+  .demo-block_title {
+    margin: 0 0 15px;
+    font-size: responsive 14px 28px;
+    font-weight: bold;
+    color: var(--color-driftwood) !important;
+    outline: 4px dashed #fff;
+    border-radius: 10px;
+    outline-offset: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .demo-block_content {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  &.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.alignfull {
+    width: 100%;
+    max-width: 100%;
+  }
+}

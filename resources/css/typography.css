@@ -1,0 +1,132 @@
+/**
+ * Basic WYSIWYG formatting
+ */
+.u-wysiwyg-text--1 {
+  b,
+  strong {
+    font-weight: 600;
+  }
+
+  s {
+    text-decoration: line-through;
+  }
+
+  u {
+    text-decoration: underline;
+  }
+
+  p {
+    display: block;
+  }
+
+  i,
+  em {
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: auto;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/**
+ * Default WYSIWYG text
+ */
+.u-wysiwyg-text--2 {
+  hr {
+    background-color: var(--color--1);
+    border: 0 none;
+    margin-inline: auto;
+    size: 100% 1px;
+  }
+
+  blockquote {
+    padding-left: 20px;
+  }
+
+  code,
+  pre {
+    background: rgba(52, 67, 72, 0.2);
+    border-radius: 3px;
+    font-family: var(--family--3);
+    padding: 0.25em 0.4em;
+    white-space: normal;
+  }
+}
+
+/**
+ * Default WYSIWYG headings
+ */
+.u-wysiwyg-headings--1 {
+  --headings-weight: 400;
+  --headings-bold-weight: 600;
+  --headings-wrap: balance;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    display: block;
+    font-weight: var(--headings-weight, 400);
+    text-wrap: pretty;
+
+    b,
+    strong {
+      font-weight: var(--headings-bold-weight, 600);
+    }
+  }
+}
+
+/**
+ * Default WYSIWYG lists
+ */
+.u-wysiwyg-lists--1 {
+  /* CSS variables for list customization */
+  --list-gap: 10px;
+  --list-indent: 20px;
+
+  /* Restore default list styling that was stripped by reset.css */
+  ol,
+  ul {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+  }
+
+  li {
+    margin: 0 0 var(--list-gap) 0;
+    padding: 0 0 0 var(--list-indent);
+    text-indent: 0;
+
+    &::marker {
+      font-variant-numeric: tabular-nums;
+      text-align: start;
+      text-align-last: auto;
+      text-indent: 0;
+      text-transform: none;
+      unicode-bidi: isolate;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:has(ol, ul) {
+      padding-bottom: calc(var(--list-gap) * 2);
+    }
+
+    ol,
+    ul {
+      margin: var(--list-gap) * 0 0;
+    }
+  }
+}

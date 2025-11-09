@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "sage/single-hero-block",
+  "title": "Single Hero Block",
+  "description": "A hero block for single post templates with title, meta, and featured image.",
+  "category": "theme",
+  "icon": "cover-image",
+  "keywords": ["hero", "single", "post", "header"],
+  "textdomain": "sage",
+  "acf": {
+    "blockVersion": 3,
+    "renderTemplate": "single-hero-block.php",
+    "hideFieldsInSidebar": true,
+    "mode": "preview"
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"],
+    "anchor": true
+  }
+}

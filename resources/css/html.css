@@ -1,0 +1,64 @@
+/**
+ * HTML document & body
+ */
+html,
+body {
+  /* Layout */
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
+  width: 100%;
+
+  /* Typography */
+  font-size: var(--base--font-size, 16px);
+  font-family: var(--base--font-family);
+  font-weight: var(--base--font-weight);
+  line-height: var(--base--line-height, 100%);
+
+  /* Colors */
+  background: var(--base--background-color, #fff);
+  color: var(--base--text-color, #000);
+
+  /* Font smoothing */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  /* Touch actions */
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+html {
+  /* Scroll behaviour */
+  scroll-behavior: initial;
+  min-height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* Reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+    }
+  }
+}
+
+/* Test CSS - Remove after verifying Vite is working */
+body {
+  background-color: #f0f8ff !important;
+  border-top: 5px solid #ff6b6b !important;
+}
+
+#app {
+  background-color: #fff !important;
+  border: 3px dashed #4ecdc4 !important;
+  padding: 20px !important;
+}
+
+main#main {
+  background-color: blue !important;
+  padding: 30px !important;
+  border-radius: 10px !important;
+  border: 2px solid #ff6b6b !important;
+}

@@ -1,1 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/* Auto-import all block styles for editor preview and HMR */
+@import './blocks.css';

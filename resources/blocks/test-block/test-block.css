@@ -1,0 +1,87 @@
+.c-test-block {
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .test-block_inner {
+    max-width: 100%;
+  }
+
+  .test-block_title {
+    margin: 0 0 15px;
+    position: relative;
+    /* PostCSS Size Clamp example - fluid typography */
+    font-size: responsive 24px 32px;
+    font-weight: bold;
+    color: yellow;
+    outline: 10px dashed #fff;
+    outline-offset: 10px;
+    line-height: 1em;
+    border-radius: 10px;
+
+    &::before {
+      content: '';
+      display: block;
+      size: 70px 140px;
+      background-color: black;
+      opacity: 0.5;
+      margin-inline: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .test-block_content {
+    margin: 0;
+    /* PostCSS Size Clamp example - fluid typography with line-height */
+    font-size: responsive 16px 20px / 1.6;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .test-block_innerblocks {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px dashed rgba(255, 255, 255, 0.3);
+
+    /* Style for ACF inner blocks container */
+    .acf-inner-blocks-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.alignfull {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &.is-clicked {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  .test-block_js-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 10;
+    pointer-events: none;
+  }
+}

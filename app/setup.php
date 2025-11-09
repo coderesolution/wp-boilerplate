@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Theme setup.
  */
@@ -29,14 +31,14 @@ add_filter('block_editor_settings_all', function ($settings) {
  * @return void
  */
 add_filter('admin_head', function () {
-    if (! get_current_screen()?->is_block_editor()) {
+    if ( ! get_current_screen()?->is_block_editor()) {
         return;
     }
 
     $dependencies = json_decode(Vite::content('editor.deps.json'));
 
     foreach ($dependencies as $dependency) {
-        if (! wp_script_is($dependency)) {
+        if ( ! wp_script_is($dependency)) {
             wp_enqueue_script($dependency);
         }
     }

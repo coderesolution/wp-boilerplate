@@ -1,0 +1,73 @@
+/**
+ * VIEW TRANSITION API
+ */
+@view-transition {
+	navigation: auto;
+}
+
+:root {
+	view-transition-name: root;
+}
+
+::view-transition-group(root) {
+	z-index: auto !important;
+}
+
+::view-transition-image-pair(root) {
+	isolation: isolate;
+	will-change: transform, opacity, clip-path;
+	z-index: 1;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+::view-transition-old(root) {
+	animation-name: slide-out;
+	z-index: 1;
+}
+
+::view-transition-new(root) {
+	animation-name: slide-in;
+	z-index: 999;
+}
+
+@keyframes slide-out {
+	from {
+		filter: brightness(1);
+		transform: translateY(0) scale(1);
+	}
+
+	to {
+		filter: brightness(50%);
+		transform: translateY(-35%) scale(1.1);
+	}
+}
+
+@keyframes slide-in {
+	from {
+		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+	}
+
+	to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+/* Disable view transitions for disabled elements */
+::view-transition-group(disabled),
+::view-transition-old(disabled),
+::view-transition-new(disabled) {
+	animation-duration: 0s !important;
+}
+
+/* Exclude cursor from view transitions */
+::view-transition-group(none),
+::view-transition-old(none),
+::view-transition-new(none) {
+	animation-duration: 0s !important;
+}

@@ -1,0 +1,49 @@
+:root {
+  /**
+	 * Colours
+	 */
+  --color--1: #ffa5c1;
+  --color--2: #ff6606;
+
+  /**
+	 * Font families
+	 *
+	 * Fallbacks (retrieved from systemfontstack.com)
+	 * Sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	 * Serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	 * Mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	 */
+  --family--1: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+  --family--2: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+  --family--3: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
+
+  /**
+	 * Containers
+	 */
+  /* Max widths */
+  --container-max-width-1: 1360px;
+
+  /* Padding */
+  --container-padding-lg: 40px;
+  --container-padding-sm: 20px;
+  --container-padding: var(--container-padding-sm);
+
+  @media (min-width: 1025px) {
+    --container-padding: var(--container-padding-lg);
+  }
+
+  /**
+	 * Base/root
+	 */
+  --base--background-color: #fcfbfb;
+  --base--text-color: #000;
+  --base--font-family: var(--family--2);
+  --base--font-size: 16px;
+  --base--font-weight: 400;
+  --base--line-height: 1em;
+}
