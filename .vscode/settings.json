@@ -1,0 +1,81 @@
+{
+  // Window title
+  "window.title": "${dirty}${activeEditorShort}${separator}project name${separator}domain.com.local",
+
+  // Parameter Hints
+  "editor.hover.delay": 2000,
+  "editor.parameterHints.delay": 2000,
+  // "editor.hover.enabled": false,
+  // "editor.inlayHints.enabled": false,
+  // "editor.parameterHints.enabled": false,
+
+  // Package Manager
+  "npm.packageManager": "pnpm",
+
+  // PHP
+  "pint.executable": "${workspaceFolder}/vendor/bin/pint",
+  "pint.configPath": "${workspaceFolder}/pint.json",
+  "[php]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 4,
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "open-southeners.laravel-pint"
+  },
+  "files.associations": {
+    "*.php": "php"
+  }
+
+  // CSS Settings
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "postcss.validate": false,
+
+  // Stylelint
+  "stylelint.enable": true,
+  "stylelint.configFile": "stylelint.config.cjs",
+  "stylelint.validate": ["css", "postcss"],
+
+	// Editor General Settings
+	"editor.quickSuggestions": {
+		"strings": true,
+		"other": true,
+		"comments": false
+	},
+	"editor.suggestSelection": "first",
+	"editor.suggest.showProperties": true,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false,
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"editor.formatOnSave": true,
+	"editor.rulers": [120],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "always"
+	},
+
+	// JavaScript Settings
+	"javascript.validate.enable": true,
+	"typescript.validate.enable": false,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "always"
+		}
+	},
+
+	// File Management
+	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace": true,
+	"files.associations": {
+		"*.css": "css",
+		"*.pcss": "postcss",
+		"*.scss": "scss"
+	},
+
+	// Problems Panel Configuration
+	"problems.showCurrentInStatus": true,
+	"problems.decorations.enabled": false,
+	"problems.autoReveal": false
+}
