@@ -16,7 +16,7 @@
 
   .demo-block_title {
     margin: 0 0 15px;
-    font-size: responsive 14px 28px;
+    font-size: 28px;
     font-weight: bold;
     color: var(--color-driftwood) !important;
     outline: 4px dashed #fff;

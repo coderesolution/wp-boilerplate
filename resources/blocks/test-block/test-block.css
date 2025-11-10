@@ -13,7 +13,7 @@
     margin: 0 0 15px;
     position: relative;
     /* PostCSS Size Clamp example - fluid typography */
-    font-size: responsive 24px 32px;
+    font-size: 32px;
     font-weight: bold;
     color: yellow;
     outline: 10px dashed #fff;
@@ -39,7 +39,7 @@
   .test-block_content {
     margin: 0;
     /* PostCSS Size Clamp example - fluid typography with line-height */
-    font-size: responsive 16px 20px / 1.6;
+    font-size: 20px / 1.6;
     color: rgba(255, 255, 255, 0.95);
   }
 

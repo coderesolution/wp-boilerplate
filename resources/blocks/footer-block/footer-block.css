@@ -26,14 +26,14 @@
 
   .footer-block_section {
     .footer-block_title {
-      font-size: responsive 16px 18px;
+      font-size: 18px;
       font-weight: 600;
       margin-bottom: 16px;
       color: #fff;
     }
 
     .footer-block_text {
-      font-size: responsive 14px 16px;
+      font-size: 16px;
       line-height: 1.6;
       color: #d1d5db;
       margin-bottom: 16px;
@@ -46,7 +46,7 @@
     }
 
     .footer-block_link {
-      font-size: responsive 14px 16px;
+      font-size: 16px;
       color: #d1d5db;
       text-decoration: none;
       transition: color 0.2s ease;
@@ -69,7 +69,7 @@
     gap: 16px;
 
     .footer-block_copyright {
-      font-size: responsive 12px 14px;
+      font-size: 14px;
       color: #9ca3af;
     }
 
@@ -79,7 +79,7 @@
     }
 
     .footer-block_social-link {
-      font-size: responsive 14px 16px;
+      font-size: 16px;
       color: #d1d5db;
       text-decoration: none;
       transition: color 0.2s ease;

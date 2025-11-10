@@ -1,48 +1,42 @@
 {
-  "name": "sage",
-  "private": true,
-  "engines": {
-    "node": ">=20.0.0"
-  },
-  "type": "module",
-  "scripts": {
-    "blocks:css": "php app/Scripts/generate-blocks-css.php",
-    "sync:theme": "node app/Scripts/sync-theme-colors.js",
-    "dev": "npm run blocks:css && npm run sync:theme && vite",
-    "build": "npm run blocks:css && npm run sync:theme && vite build",
-    "lint:js": "eslint --config eslint.config.js 'resources/js/**/*.js' 'resources/blocks/**/*.js' --max-warnings 9999 || exit 0",
-    "lint:js:fix": "eslint --fix --config eslint.config.js 'resources/js/**/*.js' 'resources/blocks/**/*.js' --max-warnings 9999 || exit 0",
-    "lint:css": "stylelint 'resources/css/**/*.css' 'resources/blocks/**/*.css' || exit 0",
-    "lint:css:fix": "stylelint --fix 'resources/css/**/*.css' 'resources/blocks/**/*.css' || exit 0",
-    "lint:php": "./vendor/bin/pint --test",
-    "lint:php:fix": "./vendor/bin/pint",
-    "translate": "npm run translate:pot && npm run translate:update",
-    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --include=\"theme.json,patterns,app,resources\"",
-    "translate:update": "for file in ./resources/lang/*.po; do wp i18n update-po ./resources/lang/sage.pot $file; done",
-    "translate:compile": "npm run translate:mo && npm run translate:js",
-    "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
-    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
-  },
-  "devDependencies": {
-    "@roots/vite-plugin": "^1.0.2",
-    "@stylistic/stylelint-plugin": "^3.1.3",
-    "@tailwindcss/vite": "^4.0.9",
-    "eslint": "9.30.1",
-    "globals": "^16.5.0",
-    "laravel-vite-plugin": "^1.2.0",
-    "postcss": "^8.5.6",
-    "postcss-import": "^16.1.1",
-    "postcss-import-ext-glob": "^2.1.1",
-    "postcss-preset-env": "^10.4.0",
-    "postcss-pxtorem": "^6.1.0",
-    "postcss-size-clamp": "^3.3.2",
-    "stylelint": "^16.21.1",
-    "stylelint-config-sass-guidelines": "^12.1.0",
-    "tailwindcss": "^4.0.9",
-    "vite": "^6.2.0"
-  },
-  "dependencies": {
-    "gsap": "^3.13.0",
-    "lenis": "^1.3.14"
-  }
+    "name": "sage",
+    "private": true,
+    "engines": {
+        "node": ">=20.0.0"
+    },
+    "type": "module",
+    "scripts": {
+        "blocks:css": "php app/Scripts/generate-blocks-css.php",
+        "sync:theme": "node app/Scripts/sync-theme-colors.js",
+        "dev": "npm run blocks:css && npm run sync:theme && vite",
+        "build": "npm run blocks:css && npm run sync:theme && vite build",
+        "lint:js": "eslint --config eslint.config.js 'resources/js/**/*.js' 'resources/blocks/**/*.js' --max-warnings 9999 || exit 0",
+        "lint:js:fix": "eslint --fix --config eslint.config.js 'resources/js/**/*.js' 'resources/blocks/**/*.js' --max-warnings 9999 || exit 0",
+        "lint:css": "stylelint 'resources/css/**/*.css' 'resources/blocks/**/*.css' || exit 0",
+        "lint:css:fix": "stylelint --fix 'resources/css/**/*.css' 'resources/blocks/**/*.css' || exit 0",
+        "lint:php": "./vendor/bin/pint --test",
+        "lint:php:fix": "./vendor/bin/pint",
+        "translate": "npm run translate:pot && npm run translate:update",
+        "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --include=\"theme.json,patterns,app,resources\"",
+        "translate:update": "for file in ./resources/lang/*.po; do wp i18n update-po ./resources/lang/sage.pot $file; done",
+        "translate:compile": "npm run translate:mo && npm run translate:js",
+        "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
+        "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
+    },
+    "devDependencies": {
+        "@roots/vite-plugin": "^1.0.2",
+        "@stylistic/stylelint-plugin": "^3.1.3",
+        "@tailwindcss/vite": "^4.0.9",
+        "eslint": "9.30.1",
+        "globals": "^16.5.0",
+        "laravel-vite-plugin": "^1.2.0",
+        "stylelint": "^16.21.1",
+        "stylelint-config-sass-guidelines": "^12.1.0",
+        "tailwindcss": "^4.0.9",
+        "vite": "^6.2.0"
+    },
+    "dependencies": {
+        "gsap": "^3.13.0",
+        "lenis": "^1.3.14"
+    }
 }

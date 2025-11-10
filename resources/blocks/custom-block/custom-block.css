@@ -14,14 +14,14 @@
 
 .c-custom-block[data-cid] {
   .custom-block_title {
-    font-size: responsive 24px 32px;
+    font-size: 32px;
     font-weight: 600;
     color: #1f2937;
     margin-bottom: 16px;
   }
 
   .custom-block_content {
-    font-size: responsive 16px 18px;
+    font-size: 18px;
     line-height: 1.6;
     color: #4b5563;
     margin-bottom: 24px;
@@ -33,7 +33,7 @@
     color: #fff;
     padding: 12px 24px;
     border-radius: 6px;
-    font-size: responsive 14px 16px;
+    font-size: 16px;
     font-weight: 500;
     text-decoration: none;
     transition: background-color 0.2s ease, transform 0.2s ease;
@@ -62,4 +62,3 @@
     transform: translateY(0);
   }
 }
-

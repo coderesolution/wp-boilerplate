@@ -20,7 +20,7 @@
   }
 
   .header-block_logo {
-    font-size: responsive 20px 28px;
+    font-size: 28px;
     font-weight: 700;
     color: #1f2937;
     text-decoration: none;
@@ -40,7 +40,7 @@
   }
 
   .header-block_link {
-    font-size: responsive 14px 16px;
+    font-size: 16px;
     color: #4b5563;
     text-decoration: none;
     transition: color 0.2s ease;
@@ -57,7 +57,7 @@
     color: #fff;
     padding: 8px 16px;
     border-radius: 6px;
-    font-size: responsive 14px 16px;
+    font-size: 16px;
     text-decoration: none;
     transition: background-color 0.2s ease;
 

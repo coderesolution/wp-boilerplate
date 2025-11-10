@@ -19,7 +19,7 @@
   }
 
   .single-hero-block_title {
-    font-size: responsive 32px 56px;
+    font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 16px;
@@ -33,7 +33,7 @@
     gap: 24px;
     flex-wrap: wrap;
     margin-bottom: 24px;
-    font-size: responsive 14px 16px;
+    font-size: 16px;
     opacity: 0.9;
   }
 
@@ -44,7 +44,7 @@
   }
 
   .single-hero-block_excerpt {
-    font-size: responsive 16px 20px;
+    font-size: 20px;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
@@ -64,4 +64,3 @@
     }
   }
 }
-
